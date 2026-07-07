@@ -29,11 +29,11 @@ jobs:
         run: docker build -t student-api .
 
       - name: Run Trivy Scan
-  uses: aquasecurity/trivy-action@master
-  with:
-    image-ref: student-api
-    format: table
-    exit-code: 0
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: student-api
+          format: table
+          exit-code: 0
 
       - name: Install OPA
         run: |
